@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categoria_navigation"
+    app:startDestination="@id/categoriaListFragment">
+
+
+    <fragment
+        android:id="@+id/categoriaFavoriteFragment"
+        android:name="com.example.themeal.view.fragments.CategoriaFavoriteFragment"
+        android:label="fragment_categoria_favorite"
+        tools:layout="@layout/fragment_categoria_favorite_frangment" >
+        <action
+            android:id="@+id/action_categoriaFavoriteFragment_to_categoriaDetailFragment"
+            app:destination="@id/categoriaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriaListFragment2"
+        android:name="com.example.themeal.view.fragments.CategoriaListFragment2"
+        android:label="fragment_categoria_list2"
+        tools:layout="@layout/fragment_categoria_list2" >
+        <action
+            android:id="@+id/action_categoriaListFragment2_to_categoriaDetailFragment"
+            app:destination="@id/categoriaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.themeal.view.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_categoriaDetailFragment"
+            app:destination="@id/categoriaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriaListFragment"
+        android:name="com.example.themeal.view.fragments.CategoriaListFragment"
+        android:label="fragment_categoria_list"
+        tools:layout="@layout/fragment_categoria_list" >
+        <action
+            android:id="@+id/action_categoriaListFragment_to_categoriaDetailFragment"
+            app:destination="@id/categoriaDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoriaDetailFragment"
+        android:name="com.example.themeal.view.fragments.CategoriaDetailFragment"
+        android:label="fragment_categoria_detail"
+        tools:layout="@layout/fragment_categoria_detail">
+        <argument
+            android:name="categoria"
+            app:argType="com.example.themeal.model.Categoria" />
+    </fragment>
+</navigation>
